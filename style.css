@@ -1,0 +1,139 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    background: #eee;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.navbar{
+    background: rgb(169, 165, 165);
+    padding: 10px;
+   border-radius: 10px;
+   box-shadow:0 5px 15px rgba(0,0,0,.5) ;
+   display: flex;
+}
+
+.logo{
+    display: flex;
+    margin-right: 80px;
+    font-weight: bold;
+    font-size: 18px; 
+    align-items: center; 
+}
+
+.link{
+    display: flex;
+    gap: 40px;
+   list-style: none;
+}
+
+.link li{
+    position: relative;
+}
+
+.link a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    gap: 10px;
+    padding: 10px 18px;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+.link a .fa-chevron-down{
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.drop-menu{
+    position: absolute;
+    list-style: none;
+    background: rgb(190, 186, 186);
+    border-radius: 10px;
+    width: 180px;
+    margin-top: 1px;
+   padding: 10px 18px;
+   display: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    transition: 0.4s ease-in-out;
+}
+
+
+
+.link .fa-chevron-down:hover {
+    transform: rotate(180deg);
+}
+
+.link li:hover .drop-menu{
+    display: block;
+}
+
+.link > li > a:hover{
+  background: gray;
+  border-radius: 10px;
+  
+}
+.drop-menu li:hover > a{
+    background-color:  ghostwhite;
+    border-radius: 10px;
+    color: black;
+}
+
+.drop-menu li a  {
+    padding: 14px 16px;
+    display: flex;
+  
+    align-items: center;
+    justify-content: center;
+} 
+.drop-menu li a i{
+    width: 20px;
+    text-align: center;
+
+}
+
+.drop-menu .fas{
+   color: black;
+}
+
+@media (max-width:577px) {
+    .container{
+        margin-top: 20px;
+        padding: 0 20px;
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-direction: column;
+
+    }
+    .logo{
+        margin: 0 0 20px 0;
+    }
+    .link{
+        flex-direction: column;
+        width: 100%;
+        gap: 1px;
+    }
+    .link li a{
+       
+        padding: 15px;
+    }
+    .drop-menu{
+        position: static;
+        margin-top: 5px;
+    }
+
+}
